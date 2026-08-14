@@ -1,0 +1,3 @@
+src/model/Heroe.java
+src/model/Item.java
+src/view/Main.java
