@@ -19,11 +19,52 @@ public class Heroe {
        this.posicion = new int[2];
        this.inventario = new ArrayList<>(); 
     }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public int getVida() {
+        return this.vida;
+    }
+
+    public int getPuntuacion() {
+        return this.puntuacion;
+    }
+
+    public int getDamage() {
+        return this.damage;
+    }
+
+    public String getPosicion() {
+        return Arrays.toString(this.posicion);
+    }
+
+    public void getInventario() {
+        for (Item item : this.inventario) {
+            item.info();
+            System.out.println();
+        }
+        
+    }
     
+    public void addToInventario(String item, int damage, int curacion) {
+        this.inventario.add(new Item(item,damage,curacion));
+    }
+
+    public void addToInventario(String item) {
+        this.inventario.add(new Item(item));
+    }
+
+    public void addToInventario(Item item) {
+        this.inventario.add(item);
+    }
+
     public void info() {
-       System.out.println("Nombre: " + this.nombre + 
-               "\nPuntuacion: " + this.puntuacion + 
-               "\nVida: " + this.vida +
-               "\nPosicion Mapa: " + Arrays.toString(this.posicion)); 
+       System.out.println("Nombre: " + getNombre() + 
+               "\nPuntuacion: " + getPuntuacion() + 
+               "\nVida: " + getVida() +
+               "\nDaño: " + getDamage() +
+               "\nPosicion Mapa: " + getPosicion()); 
     } 
 }
