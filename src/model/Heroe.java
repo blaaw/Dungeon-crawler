@@ -13,7 +13,7 @@ public class Heroe {
 
     public Heroe(String nombre) {
        this.nombre = nombre;
-       this.vida = 300;
+       this.vida = 100;
        this. puntuacion = 0;
        this.damage = 10;
        this.posicion = new int[2];
@@ -28,16 +28,33 @@ public class Heroe {
         return this.vida;
     }
 
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
+
     public int getPuntuacion() {
         return this.puntuacion;
+    }
+
+    public void setPuntuacion(int puntuacion) {
+        this.puntuacion = puntuacion;
     }
 
     public int getDamage() {
         return this.damage;
     }
 
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
+    
     public String getPosicion() {
         return Arrays.toString(this.posicion);
+    }
+
+    public void setPosicion(int x, int y) {
+        this.posicion[0] = x;
+        this.posicion[1] = y;
     }
 
     public void getInventario() {
@@ -45,7 +62,6 @@ public class Heroe {
             item.info();
             System.out.println();
         }
-        
     }
     
     public void addToInventario(String item, int damage, int curacion) {
