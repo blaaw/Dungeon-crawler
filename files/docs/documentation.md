@@ -46,7 +46,7 @@ Voy a empezar con el modelo MCV para separar funciones y de momento tengo claro:
             si el return es huir moverHeroe(siguiente-casilla)
         si hay item, decirlo y dar opcion de cogerlo o no
 
-i think i could fuse these methods with Mazmorra
+i think i could fuse these methods with Mazmorra, sisi. 
 ### Controla Batalla
     - turno : int
     - Batalla(heroe, enemigo)
